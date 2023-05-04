@@ -22,7 +22,7 @@ database.once('connected', () => {
     console.log('Database Connected');
 });
 app.get('/' , (req, res) =>
-{res.send('welcome to pokemon DB')});
+{res.send('welcome to pokemon DB 121')});
 app.post('/game/save' , (req, res) =>{
     const form = req.body;
     Game.create({player1_name : form.player1_name , player2_name : form.player2_name ,player1_hp :req.player1_hp,player2_hp :req.player2_hp,   })
