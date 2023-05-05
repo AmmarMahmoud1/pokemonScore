@@ -38,7 +38,7 @@ app.post('/game/save' , (req, res) =>{
   }
 
   else  if (form.hp2 > form.hp1) {
-    Game.create({player1_name : form.player1_name , player2_name : form.player2_name ,hp1 :Number(form.hp1),hp2 :Number(form.hp2), score1: Number(form.score1), score2:Number(form.score2), winner :"player  2win the game"   })
+    Game.create({player1_name : form.player1_name , player2_name : form.player2_name ,hp1 :Number(form.hp1),hp2 :Number(form.hp2), score1: Number(form.score1), score2:Number(form.score2), winner :"player 2 win the game"   })
     .then((newGame) => { res.status(201).send(newGame);
 }).catch((err) => {
     res.status(400).send(err);
@@ -46,7 +46,7 @@ app.post('/game/save' , (req, res) =>{
   }
 
   else  if (form.hp1 == form.hp2) {
-    Game.create({player1_name : form.player1_name , player2_name : form.player2_name ,hp1 :Number(form.hp1),hp2 :Number(form.hp2), score1: Number(form.score1), score2:Number(form.score2), winner:"The result is equivalent between player 1 and player 2"   })
+    Game.create({player1_name : form.player1_name , player2_name : form.player2_name ,hp1 :Number(form.hp1),hp2 :Number(form.hp2), score1: Number(form.score1), score2:Number(form.score2), winner:"Deuce"   })
     .then((newGame) => { res.status(201).send(newGame);
 }).catch((err) => {
     res.status(400).send(err);
